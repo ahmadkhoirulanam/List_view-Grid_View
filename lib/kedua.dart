@@ -1,4 +1,6 @@
 import 'package:flutter/material.dart';
+import 'package:navigator_5d/list_horizontal.dart';
+import 'package:navigator_5d/list_vertical.dart';
 
 class Utama extends StatelessWidget {
   const Utama({super.key});
@@ -31,7 +33,9 @@ class Utama extends StatelessWidget {
           ElevatedButton(
             onPressed: () {
               Navigator.push(
-                  context, MaterialPageRoute(builder: (context) => Utama()));
+                  context,
+                  MaterialPageRoute(
+                      builder: (context) => List_view_Vertical()));
             },
             child: Text(
               "List View Verical",
@@ -45,7 +49,9 @@ class Utama extends StatelessWidget {
           ElevatedButton(
             onPressed: () {
               Navigator.push(
-                  context, MaterialPageRoute(builder: (context) => Utama()));
+                  context,
+                  MaterialPageRoute(
+                      builder: (context) => List_view_horizontal()));
             },
             child: Text(
               "List View Horizontal",
