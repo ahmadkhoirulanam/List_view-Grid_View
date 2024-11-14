@@ -1,4 +1,6 @@
 import 'package:flutter/material.dart';
+import 'package:navigator_5d/grid_data.dart';
+import 'package:navigator_5d/grid_view.dart';
 import 'package:navigator_5d/list_horizontal.dart';
 import 'package:navigator_5d/list_vertical.dart';
 
@@ -43,7 +45,7 @@ class Utama extends StatelessWidget {
             ),
             style: ElevatedButton.styleFrom(backgroundColor: Colors.green),
           ),
-          SizedBox(
+          const SizedBox(
             height: 10,
           ),
           ElevatedButton(
@@ -65,13 +67,27 @@ class Utama extends StatelessWidget {
           ElevatedButton(
             onPressed: () {
               Navigator.push(
-                  context, MaterialPageRoute(builder: (context) => Utama()));
+                  context, MaterialPageRoute(builder: (context) => Grid()));
             },
             child: Text(
               "Grid View",
               style: TextStyle(color: Colors.black),
             ),
             style: ElevatedButton.styleFrom(backgroundColor: Colors.yellow),
+          ),
+          SizedBox(
+            height: 10,
+          ),
+          ElevatedButton(
+            onPressed: () {
+              Navigator.push(
+                  context, MaterialPageRoute(builder: (context) => GridData()));
+            },
+            child: Text(
+              "Grid View Data",
+              style: TextStyle(color: Colors.white),
+            ),
+            style: ElevatedButton.styleFrom(backgroundColor: Colors.blue),
           ),
         ],
       ),

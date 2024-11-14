@@ -31,21 +31,43 @@ class Pertama extends StatelessWidget {
         title: Text("Navigator"),
         backgroundColor: Colors.green,
       ),
-      body: Column(
-        children: [
-          const Text("Halaman 1"),
-          ElevatedButton(
-            onPressed: () {
-              Navigator.push(
-                  context, MaterialPageRoute(builder: (context) => Utama()));
-            },
-            child: Text(
-              "Login",
-              style: TextStyle(color: Colors.white),
+      body: Padding(
+        padding: const EdgeInsets.all(16.0),
+        child: Column(
+          mainAxisAlignment: MainAxisAlignment.center,
+          children: [
+            TextFormField(
+              decoration: const InputDecoration(
+                labelText: 'Masukan Username',
+                border: OutlineInputBorder(),
+              ),
             ),
-            style: ElevatedButton.styleFrom(backgroundColor: Colors.green),
-          ),
-        ],
+            const SizedBox(
+              height: 10,
+            ),
+            TextFormField(
+              obscureText: true,
+              decoration: const InputDecoration(
+                labelText: 'Masukan Password',
+                border: OutlineInputBorder(),
+              ),
+            ),
+            const SizedBox(
+              height: 10,
+            ),
+            ElevatedButton(
+              onPressed: () {
+                Navigator.push(
+                    context, MaterialPageRoute(builder: (context) => Utama()));
+              },
+              child: Text(
+                "Login",
+                style: TextStyle(color: Colors.white),
+              ),
+              style: ElevatedButton.styleFrom(backgroundColor: Colors.green),
+            ),
+          ],
+        ),
       ),
     );
   }

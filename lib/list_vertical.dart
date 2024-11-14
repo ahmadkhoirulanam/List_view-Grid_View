@@ -6,25 +6,32 @@ class List_view_Vertical extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(
-        title: Text("data"),
-      ),
-      body: ListView(
-        children: <Widget>[
-          ListTile(
-            leading: Icon(Icons.home),
-            title: Text("Pati"),
+        appBar: AppBar(
+          title: Text(
+            "data",
+            style: TextStyle(color: Colors.white),
           ),
-          ListTile(
-            leading: Icon(Icons.phone),
-            title: Text("08567856857"),
-          ),
-          ListTile(
-            leading: Icon(Icons.school),
-            title: Text("Upgris"),
-          )
-        ],
-      ),
-    );
+          backgroundColor: Colors.blue,
+        ),
+        body: ListView(
+          children: <Widget>[
+            ListTile(
+              leading: Icon(Icons.phone),
+              title: Text("08589230949"),
+            ),
+            ListTile(
+              leading: Icon(Icons.home),
+              title: Text("Semarang"),
+            ),
+            ListTile(
+              leading: Icon(Icons.phone),
+              title: Text("08589230949"),
+            ),
+            ListTile(
+              leading: Icon(Icons.home),
+              title: Text("Semarang"),
+            )
+          ],
+        ));
   }
 }
